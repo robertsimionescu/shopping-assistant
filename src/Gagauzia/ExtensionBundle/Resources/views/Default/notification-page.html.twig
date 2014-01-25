@@ -1,0 +1,9 @@
+{% stylesheets 'bundles/gagauziaextension/css/style.css' filter="cssrewrite" %}
+<link href="http://192.168.12.118{{ asset_url }}" rel="stylesheet" type="text/css" />
+{% endstylesheets %}
+<div class="info">
+    <h2>Pret</h2>
+    <p class="price">{{ price }}<sup>{{ price_decimal }}</sup> Lei</p>
+    <p class="advantage">Avantajul Tau</p>
+    <p class="advantage_price">{{ price_adv }}<sup>{{ price_adv_decimal }}</sup> Lei <sup>({{ price_adv_pct }} %)</sup></p>
+</div>
