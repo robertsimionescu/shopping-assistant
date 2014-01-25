@@ -32,21 +32,3 @@ filter="cssrewrite" %}
         <a class="buy" href="{{ emag_product_url }}" title="adaug&#259; &icirc;n co&#351;" target="_blank">adaug&#259; &icirc;n co&#351;</a>
     </div>
 </div>
-
-{#
-Produs: {{ title }}<br/>
-Pret eMAG: {{ price }} RON<br/>
-Avantaj:  {{ price_adv }} RON ({{ price_adv_pct }}%)<br/>
-Imagine: <img src="{{ image }}" />#}
-
-jQuery.post(
-    "http://192.168.12.118/emag/web/app_dev.php/get-compare-page",
-    {
-        url: "altex.ro/televizor-smart-tv-led-3d-full-hd-80-cm-samsung-ue32f6400",
-        title: "Televizor Smart TV LED 3D Full HD, 80 cm, SAMSUNG UE32F6400",
-        price: "2199"
-    },
-    function( data ) {
-        alert(data.error);
-
-}, "json");

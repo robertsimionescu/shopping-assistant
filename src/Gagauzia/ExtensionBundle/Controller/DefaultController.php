@@ -30,9 +30,9 @@ class DefaultController extends Controller
             $site = $sitesService->identifySite($urlParts['domain']);
 
             $response = array(
-                'error' => false,
+                'error'   => false,
                 'results' => array(
-                    'site_id' => $site->getId(),
+                    'site_id'    => $site->getId(),
                     'title_rule' => $site->getTitleRule(),
                     'price_rule' => $site->getPriceRule(),
                 )
@@ -41,17 +41,17 @@ class DefaultController extends Controller
         } catch (EntityNotFoundException $e) {
 
             $response = array(
-                'error' => true,
+                'error'         => true,
                 'error_message' => $e->getMessage(),
-                'error_code' => self::ERROR_CODE_SITE_NOT_FOUND,
+                'error_code'    => self::ERROR_CODE_SITE_NOT_FOUND,
             );
 
         } catch (\Exception $e) {
 
             $response = array(
-                'error' => true,
+                'error'         => true,
                 'error_message' => $e->getMessage(),
-                'error_code' => self::ERROR_CODE_INVALID_INFO,
+                'error_code'    => self::ERROR_CODE_INVALID_INFO,
             );
 
         }
@@ -69,11 +69,11 @@ class DefaultController extends Controller
 
         try {
 
-            if(!is_numeric($price) || (float)$price < 0.001) {
+            if (!is_numeric($price) || (float)$price < 0.001) {
                 throw new \Exception('Invalid Price.');
             }
 
-            $price = (float) $price;
+            $price = (float)$price;
 
             $urlParts = $sitesService->parseUrl($url);
 
@@ -90,17 +90,18 @@ class DefaultController extends Controller
             $priceDifference = $price - $emagProduct->getPrice();
 
             $productInfo = array(
-                'title' => $emagProduct->getTitle(),
-                'price' => $emagProduct->getPrice(),
-                'price_adv' => $priceDifference,
-                'price_adv_pct' => round($priceDifference * 100 / (int)$price),
-                'image' => $emagProduct->getImg(),
+                'title'            => $emagProduct->getTitle(),
+                'price'            => $emagProduct->getPrice(),
+                'price_adv'        => $priceDifference,
+                'price_adv_pct'    => round($priceDifference * 100 / (int)$price),
+                'image'            => $emagProduct->getImg(),
+                'emag_product_url' => $emagProduct->getUrl(),
             );
 
             $outputHtml = $this->render('GagauziaExtensionBundle:Default:compare-page.html.twig', $productInfo);
 
             $response = array(
-                'error' => false,
+                'error'   => false,
                 'results' => array(
                     'html' => $outputHtml->getContent(),
                 )
@@ -109,17 +110,17 @@ class DefaultController extends Controller
         } catch (EntityNotFoundException $e) {
 
             $response = array(
-                'error' => true,
+                'error'         => true,
                 'error_message' => $e->getMessage(),
-                'error_code' => self::ERROR_CODE_SITE_NOT_FOUND,
+                'error_code'    => self::ERROR_CODE_SITE_NOT_FOUND,
             );
 
         } catch (\Exception $e) {
 
             $response = array(
-                'error' => true,
+                'error'         => true,
                 'error_message' => $e->getMessage(),
-                'error_code' => self::ERROR_CODE_INVALID_INFO,
+                'error_code'    => self::ERROR_CODE_INVALID_INFO,
             );
 
         }
