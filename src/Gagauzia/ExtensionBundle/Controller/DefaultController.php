@@ -91,7 +91,8 @@ class DefaultController extends Controller
 
             $productInfo = array(
                 'title'            => $emagProduct->getTitle(),
-                'price'            => $emagProduct->getPrice(),
+                'price'            => floor($emagProduct->getPrice()),
+                'price_decimal'    => $emagProduct->getPrice() - floor($emagProduct->getPrice()),
                 'price_adv'        => $priceDifference,
                 'price_adv_pct'    => round($priceDifference * 100 / $price),
                 'image'            => $emagProduct->getImg(),
