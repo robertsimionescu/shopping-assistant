@@ -1,4 +1,52 @@
+{% stylesheets 'bundles/gagauziaextension/css/style.css'
+filter="cssrewrite" %}
+<link href="{{ asset_url }}" rel="stylesheet" type="text/css" />
+{% endstylesheets %}
+<div class="main">
+    <div class="top">
+
+        <div class="message">
+            <div class="message-arrow"></div>
+            <p class="message-text">Bun&#259;, <br>Vreau sa te ajut!</p>
+        </div>
+    </div>
+    <div class="product-details">
+        <h1><a href="{{ emag_product_url }}" target="_blank">{{ title }}</a></h1>
+        <a class="product_image" href="{{ emag_product_url }}" target="_blank"><img src="{{ image }}" alt="Telefon mobil Apple iPhone 5S, 16GB, Silver" width="150" height="150" /></a>
+        <div class="info">
+            <h2>Pret</h2>
+            <p class="price">{{ price }}<sup>99</sup> Lei</p>
+            <p class="advantage">Avantajul Tau </p>
+            <p class="advantage_price">{{ price_adv }} Lei <sup>({{ price_adv_pct }} %)</sup></p>
+        </div>
+    </div>
+    <div class="product-details product-services">
+        <h2>Avantaje <span style="color:#ba1717;">e</span><span style="color:#004f92;">MAG</span></h2>
+        <p><a href="http://www.google.com" target="_blank"><img src="http://192.168.12.118/emag/web/bundles/gagauziaextension/images/transport-gratuit.jpg" alt="Transport Gratuit" width="254" height="21" /></a></p>
+        <p><a href="http://openx4.emag.ro/www/delivery/ck.php?oaparams=2__bannerid=9047__zoneid=90__cb=b44918a26c__oadest=http%3A%2F%2Fwww.emag.ro%2Fgarantia_plus" target="_blank"><img src="http://192.168.12.118/emag/web/bundles/gagauziaextension/images/garantia-plus.png" alt="Garantie Plus" width="281" /></a></p>
+        <p><a href="http://openx4.emag.ro/www/delivery/ck.php?oaparams=2__bannerid=9049__zoneid=91__cb=f26c45ef41__oadest=http%3A%2F%2Fwww.emag.ro%2F%3Fref%3Dcolet" target="_blank"><img src="http://192.168.12.118/emag/web/bundles/gagauziaextension/images/deschiderea-coletului.png" alt="Transport Gratuit" width="281" /></a></p>
+    </div>
+    <div class="product-details product-services buttons">
+        <h2>Te-ai hotarat sa cumeri de la eMAG?</h2>
+        <a class="view" href="{{ emag_product_url }}" title="vreau s&#259; v&#259;d" target="_blank">vreau s&#259; v&#259;d</a>
+        <a class="buy" href="{{ emag_product_url }}" title="adaug&#259; &icirc;n co&#351;" target="_blank">adaug&#259; &icirc;n co&#351;</a>
+    </div>
+</div>
+
+{#
 Produs: {{ title }}<br/>
 Pret eMAG: {{ price }} RON<br/>
 Avantaj:  {{ price_adv }} RON ({{ price_adv_pct }}%)<br/>
-Imagine: <img src="{{ image }}" />
+Imagine: <img src="{{ image }}" />#}
+
+jQuery.post(
+    "http://192.168.12.118/emag/web/app_dev.php/get-compare-page",
+    {
+        url: "altex.ro/televizor-smart-tv-led-3d-full-hd-80-cm-samsung-ue32f6400",
+        title: "Televizor Smart TV LED 3D Full HD, 80 cm, SAMSUNG UE32F6400",
+        price: "2199"
+    },
+    function( data ) {
+        alert(data.error);
+
+}, "json");

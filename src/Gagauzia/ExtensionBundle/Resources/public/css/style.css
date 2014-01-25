@@ -1,0 +1,321 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Helvetica, Arial, sans-serif;
+    color: #000;
+    font-size: 12px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+a:hover {
+    text-decoration: none;
+    color: #C40000;
+}
+
+a img {
+    border: none;
+}
+
+p {
+    margin: 0 0 1.12em;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+}
+
+div.main {
+    display: block;
+    width: 437px;
+    height: 604px;
+    border: 1px solid #c5c5c5;
+    background: url('../images/bg_girl.jpg') left top no-repeat;
+    /*border-radius: 4px;*/
+    float: right;
+    margin: 10px 10px 0 0;
+}
+
+div.top {
+    display: block;
+    float: left;
+    width: 100%;
+    height: 100px;
+    background: url('../images/emag_cup.png') 10px 11px no-repeat;
+    /*border: 1px solid white;*/
+}
+
+div.top div.message {
+    display: block;
+    float: right;
+    width: 130px;
+    background-color: #f5f7fb;
+    margin: 11px 88px 0 0;
+    border-color: #c3d3e1;
+    border-radius: 7px;
+    -webkit-box-shadow: 1px 1px 2px 0px rgba(50, 50, 50, 0.75);
+    -moz-box-shadow: 1px 1px 2px 0px rgba(50, 50, 50, 0.75);
+    box-shadow: 1px 1px 2px 0px rgba(50, 50, 50, 0.75);
+}
+
+div.message-arrow {
+    width: 10px;
+    height: 14px;
+    display: block;
+    float: right;
+    margin: 38px -10px 0 0;
+    background: url('../images/arrow-right.png') left top no-repeat;
+    z-index: 100;
+    position: relative;
+}
+
+.message-text {
+    font-size: 17.5px;
+    line-height: 22px;
+    color: #575757;
+    padding: 10px 5px 0px 8px;
+    letter-spacing: -1px;
+    font-weight: normal;
+    font-family: Arial, helvetica, sans-serif;
+}
+
+div.product-details {
+    display: block;
+    float: left;
+    width: 296px;
+    /*height: 177px;*/
+    border: 1px solid #d9dde5;
+    background-color: #fbfcfd;
+    border-radius: 7px;
+    margin: 0 0 0 14px;
+    -webkit-box-shadow: 1px 1px 2px 0px rgba(50, 50, 50, 0.75);
+    -moz-box-shadow: 1px 1px 2px 0px rgba(50, 50, 50, 0.75);
+    box-shadow: 1px 1px 2px 0px rgba(50, 50, 50, 0.75);
+    padding-bottom: 2px;
+}
+
+div.product-details h1 {
+    display: block;
+    color: #504c4c;
+    font-size: 18px;
+    line-height: 18px;
+    font-family: Arial, helvetica, sans-serif;
+    margin: 5px 0 0 7px;
+    /*border: 1px solid red;*/
+    width: 95%;
+}
+
+div.product-details h1 a {
+    color: #504c4c;
+    font-size: 18px;
+    line-height: 18px;
+    font-family: Arial, helvetica, sans-serif;
+}
+
+div.product-services {
+    margin-top: 9px;
+}
+
+div.product-services h2 {
+    display: block;
+    color: #504c4c;
+    font-size: 18px;
+    line-height: 18px;
+    font-family: Arial, helvetica, sans-serif;
+    margin: 5px 0 0 7px;
+    /*border: 1px solid red;*/
+    width: 95%;
+}
+
+div.product-services h2 a {
+    color: #504c4c;
+    font-size: 18px;
+    line-height: 18px;
+    font-family: Arial, helvetica, sans-serif;
+}
+
+.product_image {
+    display: block;
+    float: left;
+    margin: 0 0 5px 12px;
+}
+
+.product-details .info {
+    float: left;
+    width: 118px;
+    /*border: 1px solid red;*/
+    margin: 10px 0 0 5px;
+}
+
+.product-details .info h2 {
+    background: url('../images/small-logo.png') right top no-repeat;
+    height: 18px;
+    line-height: 18px;
+    color: #575757;
+    font-family: Arial, helvetica, sans-serif;
+    font-size: 20px;
+}
+
+.product-details .info p.price {
+    font-family: Arial, helvetica, sans-serif;
+    color: #08a000;
+    font-size: 18px;
+    font-weight: bold;
+    margin: 10px 0 0 0;
+}
+
+.product-details .info p.advantage {
+    font-family: Arial, helvetica, sans-serif;
+    color: #575757;
+    font-size: 20px;
+    font-weight: normal;
+    margin: 10px 0 0 0;
+}
+
+.product-details .info p.advantage_price {
+    font-family: Arial, helvetica, sans-serif;
+    color: #08a000;
+    font-size: 16px;
+    font-weight: bold;
+    margin: 10px 0 0 0;
+}
+
+.product-services p {
+    margin: 5px 10px 5px 7px;
+    padding: 0;
+}
+
+div.buttons {
+    width: 407px;
+    padding-bottom: 8px;
+}
+
+div.buttons h2 {
+    margin-bottom: 10px;
+}
+
+div.buttons a {
+    display: block;
+    float: left;
+    width: 130px;
+    height: 25px;
+    color: #FFFFFF;
+    font-size: 15px;
+    font-family: Arial, helvetica, sans-serif;
+    padding: 10px 0 0 50px;
+}
+
+a.find{
+    width: 130px;
+    height: 25px;
+    color: #FFFFFF!important;
+    font-weight: normal!important;
+    font-size: 15px;
+    font-family: Arial, helvetica, sans-serif;
+    padding: 10px 30px 20px 50px;
+    background: url('../images/find-button.png') left top no-repeat;
+    top:-10px;
+}
+
+div.buttons a.view {
+    background: url('../images/view-button.png') left top no-repeat;
+    margin-left: 10px;
+}
+
+div.buttons a.buy {
+    background: url('../images/buy-button.png') left top no-repeat;
+    float: right;
+    margin-right: 10px;
+}
+div.spacer5{
+    clear: both;
+    height: 5px;
+}
+
+div.spacer0{
+    clear: both;
+    height: 0px;
+}
+
+div.oferte h1 {
+    display: block;
+    color: #504c4c;
+    font-size: 15px;
+    line-height: 15px;
+    font-family: Arial, helvetica, sans-serif;
+    margin: 5px 0 0 7px;
+    /*border: 1px solid red;*/
+    width: 95%;
+}
+
+div.oferte h1 a {
+    color: #504c4c;
+    font-size: 15px;
+    line-height: 15px;
+    font-family: Arial, helvetica, sans-serif;
+}
+
+.oferte .info {
+    float: left;
+    width: 188px;
+    /*border: 1px solid red;*/
+    margin: 10px 0 0 5px;
+}
+
+.oferte .info h2 {
+    background: url('../images/small-logo.png') right top no-repeat;
+    height: 18px;
+    line-height: 18px;
+    color: #575757;
+    font-family: Arial, helvetica, sans-serif;
+    font-size: 20px;
+    text-align: right;
+    padding-right: 78px;
+}
+
+.oferte .product_image {
+    display: block;
+    float: left;
+    margin: 0 0 0 12px;
+}
+
+.oferte .info p.price {
+    font-family: Arial, helvetica, sans-serif;
+    color: #08a000;
+    font-size: 18px;
+    font-weight: bold;
+    margin: 10px 0 0 0;
+    float: right;
+}
+
+.wow{
+    background: url('../images/bulina_listing.png') right top no-repeat;
+    background-size: 86px 57px;
+    width: 86px;
+    height: 57px;
+    position: relative;
+    z-index: 100;
+    top:-14px;
+    left: 55px;
+}
+
+.detail_wow{
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: bold;
+    position: relative;
+    z-index: 100;
+    top:-40px;
+    left: 16px;
+    width:50px;
+    /*border: 1px solid red;*/
+    text-align: center;
+}
