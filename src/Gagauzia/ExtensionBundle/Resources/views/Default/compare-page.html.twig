@@ -15,9 +15,9 @@ filter="cssrewrite" %}
         <a class="product_image" href="{{ emag_product_url }}" target="_blank"><img src="{{ image }}" alt="Telefon mobil Apple iPhone 5S, 16GB, Silver" width="150" height="150" /></a>
         <div class="info">
             <h2>Pret</h2>
-            <p class="price">{{ price }}<sup>99</sup> Lei</p>
+            <p class="price">{{ price }}<sup>{{ price_decimal }}</sup> Lei</p>
             <p class="advantage">Avantajul Tau </p>
-            <p class="advantage_price">{{ price_adv }} Lei <sup>({{ price_adv_pct }} %)</sup></p>
+            <p class="advantage_price">{{ price_adv }}<sup>{{ price_adv_decimal }}</sup> Lei <sup>({{ price_adv_pct }} %)</sup></p>
         </div>
     </div>
     <div class="product-details product-services">
