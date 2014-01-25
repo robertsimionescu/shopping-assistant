@@ -101,11 +101,14 @@ class DefaultController extends Controller
             );
 
             $outputHtml = $this->render('GagauziaExtensionBundle:Default:compare-page.html.twig', $productInfo);
+            $notificationHtml = $this->render('GagauziaExtensionBundle:Default:notification-page.html.twig', $productInfo);
 
             $response = array(
                 'error'   => false,
                 'results' => array(
-                    'html' => $outputHtml->getContent(),
+                    'html'         => $outputHtml->getContent(),
+                    'title'        => $emagProduct->getTitle(),
+                    'notification' => $notificationHtml->getContent(),
                 )
             );
 
