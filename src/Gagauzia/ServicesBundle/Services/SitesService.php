@@ -49,6 +49,8 @@ class SitesService
                 $parts['path'] = '';
             }
 
+            $parts['domain'] = '';
+
             if (isset($parts['host'])) {
                 $parts['domain'] = str_replace('www.', '', $parts['host']);
             }
