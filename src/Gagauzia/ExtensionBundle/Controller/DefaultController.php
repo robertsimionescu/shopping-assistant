@@ -42,6 +42,7 @@ class DefaultController extends Controller
 
             $response = array(
                 'error' => true,
+                'error_message' => $e->getMessage(),
                 'error_code' => self::ERROR_CODE_SITE_NOT_FOUND,
             );
 
@@ -49,6 +50,7 @@ class DefaultController extends Controller
 
             $response = array(
                 'error' => true,
+                'error_message' => $e->getMessage(),
                 'error_code' => self::ERROR_CODE_INVALID_INFO,
             );
 
@@ -108,6 +110,7 @@ class DefaultController extends Controller
 
             $response = array(
                 'error' => true,
+                'error_message' => $e->getMessage(),
                 'error_code' => self::ERROR_CODE_SITE_NOT_FOUND,
             );
 
@@ -115,6 +118,7 @@ class DefaultController extends Controller
 
             $response = array(
                 'error' => true,
+                'error_message' => $e->getMessage(),
                 'error_code' => self::ERROR_CODE_INVALID_INFO,
             );
 
