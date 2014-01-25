@@ -1,0 +1,6 @@
+gagauzia_extension_page_loaded:
+    pattern:  /page-loaded
+    defaults: { _controller: GagauziaExtensionBundle:Default:pageLoaded }
+gagauzia_extension_compare_page:
+    pattern:  /get-compare-page
+    defaults: { _controller: GagauziaExtensionBundle:Default:getComparePage }

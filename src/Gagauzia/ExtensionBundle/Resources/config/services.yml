@@ -1,0 +1,7 @@
+parameters:
+#    gagauzia_extension.example.class: Gagauzia\ExtensionBundle\Example
+
+services:
+#    gagauzia_extension.example:
+#        class: %gagauzia_extension.example.class%
+#        arguments: [@service_id, "plain_value", %parameter%]

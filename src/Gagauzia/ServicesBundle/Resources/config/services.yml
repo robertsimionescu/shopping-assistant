@@ -1,0 +1,7 @@
+parameters:
+#    gagauzia_services.sites_service.class: Gagauzia\ServicesBundle\Services\SitesService
+
+services:
+#    gagauzia_services.identify_site:
+#        class: %gagauzia_services.sites_service.class%
+#        arguments: [@url]

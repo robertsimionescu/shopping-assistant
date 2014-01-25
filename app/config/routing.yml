@@ -1,0 +1,8 @@
+gagauzia_services:
+    resource: "@GagauziaServicesBundle/Resources/config/routing.yml"
+    prefix:   /
+
+gagauzia_extension:
+    resource: "@GagauziaExtensionBundle/Resources/config/routing.yml"
+    prefix:   /
+
