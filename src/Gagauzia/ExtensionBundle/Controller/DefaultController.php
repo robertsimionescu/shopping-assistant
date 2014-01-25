@@ -59,6 +59,70 @@ class DefaultController extends Controller
         return new JsonResponse($response);
     }
 
+    public function getOffersPageAction(Request $request)
+    {
+        $url = $request->request->get('url');
+        $title = $request->request->get('title');
+        $price = $request->request->get('price');
+
+        try {
+
+            $productService = new ProductsService($this->getDoctrine());
+
+            $emagProduct1 = $productService->identifyProduct(1);
+            $emagProduct2 = $productService->identifyProduct(2);
+            $emagProduct3 = $productService->identifyProduct(3);
+
+            $productsInfo = array(
+                'products' => array(
+                    0 => array(
+                        'url'   => $emagProduct1->getUrl(),
+                        'title' => $emagProduct1->getTitle(),
+                        'image' => $emagProduct1->getImg(),
+                    ),
+                    1 => array(
+                        'url'   => $emagProduct2->getUrl(),
+                        'title' => $emagProduct2->getTitle(),
+                        'image' => $emagProduct2->getImg(),
+                    ),
+                    2 => array(
+                        'url'   => $emagProduct3->getUrl(),
+                        'title' => $emagProduct3->getTitle(),
+                        'image' => $emagProduct3->getImg(),
+                    ),
+                )
+            );
+
+            $outputHtml = $this->render('GagauziaExtensionBundle:Default:offers-page.html.twig', $productsInfo);
+
+            $response = array(
+                'error'   => false,
+                'results' => array(
+                    'html'    => $outputHtml->getContent(),
+                )
+            );
+
+        } catch (EntityNotFoundException $e) {
+
+            $response = array(
+                'error'         => true,
+                'error_message' => $e->getMessage(),
+                'error_code'    => self::ERROR_CODE_SITE_NOT_FOUND,
+            );
+
+        } catch (\Exception $e) {
+
+            $response = array(
+                'error'         => true,
+                'error_message' => $e->getMessage(),
+                'error_code'    => self::ERROR_CODE_INVALID_INFO,
+            );
+
+        }
+
+        return new JsonResponse($response);
+    }
+
     public function getComparePageAction(Request $request)
     {
         $url = $request->request->get('url');

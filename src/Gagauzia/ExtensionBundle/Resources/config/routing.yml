@@ -4,3 +4,6 @@ gagauzia_extension_page_loaded:
 gagauzia_extension_compare_page:
     pattern:  /get-compare-page
     defaults: { _controller: GagauziaExtensionBundle:Default:getComparePage }
+gagauzia_extension_offers_page:
+    pattern:  /get-offers-page
+    defaults: { _controller: GagauziaExtensionBundle:Default:getOffersPage }
