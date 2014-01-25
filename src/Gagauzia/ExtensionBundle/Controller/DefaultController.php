@@ -93,7 +93,7 @@ class DefaultController extends Controller
                 'title'            => $emagProduct->getTitle(),
                 'price'            => $emagProduct->getPrice(),
                 'price_adv'        => $priceDifference,
-                'price_adv_pct'    => round($priceDifference * 100 / (int)$price),
+                'price_adv_pct'    => round($priceDifference * 100 / $price),
                 'image'            => $emagProduct->getImg(),
                 'emag_product_url' => $emagProduct->getUrl(),
             );
