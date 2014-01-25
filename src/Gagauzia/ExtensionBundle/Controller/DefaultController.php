@@ -90,12 +90,14 @@ class DefaultController extends Controller
             $priceDifference = $price - $emagProduct->getPrice();
 
             $productInfo = array(
-                'title'            => $emagProduct->getTitle(),
-                'price'            => $emagProduct->getPrice(),
-                'price_adv'        => $priceDifference,
-                'price_adv_pct'    => round($priceDifference * 100 / (int)$price),
-                'image'            => $emagProduct->getImg(),
-                'emag_product_url' => $emagProduct->getUrl(),
+                'title'             => $emagProduct->getTitle(),
+                'price'             => floor($emagProduct->getPrice()),
+                'price_decimal'     => $emagProduct->getPrice() - floor($emagProduct->getPrice()),
+                'price_adv'         => floor($priceDifference),
+                'price_adv_decimal' => $priceDifference - floor($priceDifference),
+                'price_adv_pct'     => round($priceDifference * 100 / $price),
+                'image'             => $emagProduct->getImg(),
+                'emag_product_url'  => $emagProduct->getUrl(),
             );
 
             $outputHtml = $this->render('GagauziaExtensionBundle:Default:compare-page.html.twig', $productInfo);
