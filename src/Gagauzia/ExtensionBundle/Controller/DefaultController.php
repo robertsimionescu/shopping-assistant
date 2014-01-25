@@ -106,6 +106,7 @@ class DefaultController extends Controller
             $response = array(
                 'error'   => false,
                 'results' => array(
+                    'url'          => $emagProduct->getUrl(),
                     'html'         => $outputHtml->getContent(),
                     'title'        => $emagProduct->getTitle(),
                     'notification' => $notificationHtml->getContent(),
