@@ -264,7 +264,7 @@ div.oferte h2 {
     font-size: 12px;
     line-height: 12px;
     font-family: Arial, helvetica, sans-serif;
-    margin: 5px 0 16px 7px;
+    margin: 0 0 16px 7px;
     /*border: 1px solid red;*/
     width: 95%;
     font-weight: normal!important;
@@ -305,9 +305,9 @@ div.oferte h2 a {
 .oferte .info p.price {
     font-family: Arial, helvetica, sans-serif;
     color: #08a000;
-    font-size: 18px;
+    font-size: 14px;
     font-weight: bold;
-    margin: 10px 0 0 0;
+    margin: 3px 0 0 7px;
     float: right;
 }
 

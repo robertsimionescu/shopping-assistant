@@ -21,8 +21,8 @@ filter="cssrewrite" %}
 
             <a class="product_image" href="{{ item.url }}" target="_blank"><img src="{{ item.image }}" alt="{{ item.title }}" width="70" height="70" /></a>
             <div class="info">
-                <h2><a href="{{ item.url }}" target="_blank">{{ item.title[:50] }}</a></h2>
-                <p class="price">{{ item.price }}<sup>{{ item.wow }}</sup> Lei</p>
+                <h2><a href="{{ item.url }}" target="_blank">{{ item.title[:60] }}</a></h2>
+                <p class="price">{{ item.price }}<sup>{{ item.price_decimal }}</sup> Lei</p>
             </div>
             {#<a href="{{ item.url }}" target="_blank"><div class="wow"><div class="detail_wow">{{ item.wow }}%</div></div></a>#}
 
