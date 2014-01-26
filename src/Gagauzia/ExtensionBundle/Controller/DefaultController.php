@@ -78,16 +78,22 @@ class DefaultController extends Controller
                     0 => array(
                         'url'   => $emagProduct1->getUrl(),
                         'title' => $emagProduct1->getTitle(),
+                        'price' => $emagProduct1->getPrice(),
+                        'wow'   => 25,
                         'image' => $emagProduct1->getImg(),
                     ),
                     1 => array(
                         'url'   => $emagProduct2->getUrl(),
                         'title' => $emagProduct2->getTitle(),
+                        'price' => $emagProduct2->getPrice(),
+                        'wow'   => 20,
                         'image' => $emagProduct2->getImg(),
                     ),
                     2 => array(
                         'url'   => $emagProduct3->getUrl(),
                         'title' => $emagProduct3->getTitle(),
+                        'price' => $emagProduct3->getPrice(),
+                        'wow'   => 12,
                         'image' => $emagProduct3->getImg(),
                     ),
                 )
