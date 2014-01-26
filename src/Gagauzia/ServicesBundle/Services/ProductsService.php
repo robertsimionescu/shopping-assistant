@@ -38,4 +38,26 @@ class ProductsService
         return $emagProduct;
     }
 
+    /**
+     * Returns multiple products matching criteria
+     *
+     * @param $url
+     * @param $title
+     * @param $price
+     * @param $limit
+     * @return array
+     * @throws \Doctrine\ORM\EntityNotFoundException
+     */
+    public function getTopOffers($url, $title, $price, $limit) {
+
+        /** @var Products $emagProducts */
+        $emagProducts = $this->doctrine->getRepository('GagauziaServicesBundle:Products')->findBy(array(), null, $limit);
+
+        if (!$emagProducts) {
+            throw new EntityNotFoundException('No emag product found.');
+        }
+
+        return $emagProducts;
+
+    }
 }
