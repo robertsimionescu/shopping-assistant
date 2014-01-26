@@ -145,6 +145,7 @@ div.product-services h2 {
     margin: 5px 0 0 7px;
     /*border: 1px solid red;*/
     width: 95%;
+    background: url('../images/small-logo.png') right top no-repeat;
 }
 
 div.product-services h2 a {
@@ -173,7 +174,7 @@ div.product-services h2 a {
     line-height: 18px;
     color: #575757;
     font-family: Arial, helvetica, sans-serif;
-    font-size: 20px;
+    font-size: 18px;
 }
 
 .product-details .info p.price {
