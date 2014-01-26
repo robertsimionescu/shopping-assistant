@@ -69,38 +69,23 @@ class DefaultController extends Controller
 
             $productService = new ProductsService($this->getDoctrine());
 
-            $emagProduct1 = $productService->identifyProduct(1);
-            $emagProduct2 = $productService->identifyProduct(2);
-            $emagProduct3 = $productService->identifyProduct(3);
+            $emagProducts = $productService->getTopOffers($url, $title, $price, 6);
 
             $productsInfo = array(
-                'products' => array(
-                    0 => array(
-                        'url'           => $emagProduct1->getUrl(),
-                        'title'         => $emagProduct1->getTitle(),
-                        'price'         => floor($emagProduct1->getPrice()),
-                        'price_decimal' => round(($emagProduct1->getPrice() - floor($emagProduct1->getPrice())) * 100),
-                        'wow'           => 25,
-                        'image'         => $emagProduct1->getImg(),
-                    ),
-                    1 => array(
-                        'url'           => $emagProduct2->getUrl(),
-                        'title'         => $emagProduct2->getTitle(),
-                        'price'         => floor($emagProduct2->getPrice()),
-                        'price_decimal' => round(($emagProduct2->getPrice() - floor($emagProduct2->getPrice())) * 100),
-                        'wow'           => 20,
-                        'image'         => $emagProduct2->getImg(),
-                    ),
-                    2 => array(
-                        'url'           => $emagProduct3->getUrl(),
-                        'title'         => $emagProduct3->getTitle(),
-                        'price'         => floor($emagProduct3->getPrice()),
-                        'price_decimal' => round(($emagProduct3->getPrice() - floor($emagProduct3->getPrice())) * 100),
-                        'wow'           => 12,
-                        'image'         => $emagProduct3->getImg(),
-                    ),
-                )
+                'products' => array()
             );
+
+            /** @var $product \Gagauzia\ServicesBundle\Entity\Products */
+            foreach($emagProducts as $product) {
+                $productsInfo['products'][] = array(
+                    'url'           => $product->getUrl(),
+                    'title'         => $product->getTitle(),
+                    'price'         => floor($product->getPrice()),
+                    'price_decimal' => round(($product->getPrice() - floor($product->getPrice())) * 100),
+                    'wow'           => rand(1, 25),
+                    'image'         => $product->getImg(),
+                );
+            }
 
             $outputHtml = $this->render('GagauziaExtensionBundle:Default:offers-page.html.twig', $productsInfo);
 
