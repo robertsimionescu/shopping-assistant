@@ -29,6 +29,9 @@ filter="cssrewrite" %}
     <div class="product-details product-services buttons">
         <h2>Te-ai hotarat sa cumeri de la eMAG?</h2>
         <a class="view" href="{{ emag_product_url }}" title="vreau s&#259; v&#259;d" target="_blank">vreau s&#259; v&#259;d</a>
-        <a class="buy" href="{{ emag_product_url }}" title="adaug&#259; &icirc;n co&#351;" target="_blank">adaug&#259; &icirc;n co&#351;</a>
+        <form action="http://www.emag.ro/addtocart" name="addtocart">
+            <input type="hidden" name="product[]" value="360176">
+            <a class="buy" href="{{ emag_product_url }}" title="adaug&#259; &icirc;n co&#351;" onclick="document.addtocart.submit();" target="_blank">adaug&#259; &icirc;n co&#351;</a>
+        </form>
     </div>
 </div>
