@@ -76,25 +76,28 @@ class DefaultController extends Controller
             $productsInfo = array(
                 'products' => array(
                     0 => array(
-                        'url'   => $emagProduct1->getUrl(),
-                        'title' => $emagProduct1->getTitle(),
-                        'price' => $emagProduct1->getPrice(),
-                        'wow'   => 25,
-                        'image' => $emagProduct1->getImg(),
+                        'url'           => $emagProduct1->getUrl(),
+                        'title'         => $emagProduct1->getTitle(),
+                        'price'         => floor($emagProduct1->getPrice()),
+                        'price_decimal' => round(($emagProduct1->getPrice() - floor($emagProduct1->getPrice())) * 100),
+                        'wow'           => 25,
+                        'image'         => $emagProduct1->getImg(),
                     ),
                     1 => array(
-                        'url'   => $emagProduct2->getUrl(),
-                        'title' => $emagProduct2->getTitle(),
-                        'price' => $emagProduct2->getPrice(),
-                        'wow'   => 20,
-                        'image' => $emagProduct2->getImg(),
+                        'url'           => $emagProduct2->getUrl(),
+                        'title'         => $emagProduct2->getTitle(),
+                        'price'         => floor($emagProduct2->getPrice()),
+                        'price_decimal' => round(($emagProduct2->getPrice() - floor($emagProduct2->getPrice())) * 100),
+                        'wow'           => 20,
+                        'image'         => $emagProduct2->getImg(),
                     ),
                     2 => array(
-                        'url'   => $emagProduct3->getUrl(),
-                        'title' => $emagProduct3->getTitle(),
-                        'price' => $emagProduct3->getPrice(),
-                        'wow'   => 12,
-                        'image' => $emagProduct3->getImg(),
+                        'url'           => $emagProduct3->getUrl(),
+                        'title'         => $emagProduct3->getTitle(),
+                        'price'         => floor($emagProduct3->getPrice()),
+                        'price_decimal' => round(($emagProduct3->getPrice() - floor($emagProduct3->getPrice())) * 100),
+                        'wow'           => 12,
+                        'image'         => $emagProduct3->getImg(),
                     ),
                 )
             );
@@ -104,7 +107,7 @@ class DefaultController extends Controller
             $response = array(
                 'error'   => false,
                 'results' => array(
-                    'html'    => $outputHtml->getContent(),
+                    'html' => $outputHtml->getContent(),
                 )
             );
 
