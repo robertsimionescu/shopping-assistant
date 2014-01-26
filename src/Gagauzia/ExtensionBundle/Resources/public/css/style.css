@@ -39,7 +39,7 @@ div.main {
     height: 590px;
     /*border: 1px solid #c5c5c5;*/
     background: url('../images/bg_girl.jpg') left top no-repeat;
-    background-size: 437px 590px;
+    /*background-size: 437px 590px;*/
     background-color: #0056a1;
     border-radius: 3px;
     float: right;
@@ -116,7 +116,7 @@ div.product-details h1 {
     display: block;
     color: #504c4c;
     font-size: 16px;
-    line-height: 16px;
+    line-height: 18px;
     font-family: Arial, helvetica, sans-serif;
     margin: 3px 0 0 5px;
     max-height: 38px;
@@ -257,21 +257,23 @@ div.spacer0{
     height: 0px;
 }
 
-div.oferte h1 {
+div.oferte h2 {
+    background-image:none!important;
     display: block;
     color: #504c4c;
-    font-size: 15px;
-    line-height: 15px;
+    font-size: 12px;
+    line-height: 12px;
     font-family: Arial, helvetica, sans-serif;
-    margin: 5px 0 0 7px;
+    margin: 5px 0 16px 7px;
     /*border: 1px solid red;*/
     width: 95%;
+    font-weight: normal!important;
 }
 
-div.oferte h1 a {
+div.oferte h2 a {
     color: #504c4c;
-    font-size: 15px;
-    line-height: 15px;
+    font-size: 12px;
+    line-height: 12px;
     font-family: Arial, helvetica, sans-serif;
 }
 
@@ -282,16 +284,17 @@ div.oferte h1 a {
     margin: 10px 0 0 5px;
 }
 
-.oferte .info h2 {
-    background: url('../images/small-logo.png') right top no-repeat;
-    height: 18px;
-    line-height: 18px;
-    color: #575757;
+/*.oferte .info h2 {
+    *//*background: url('../images/small-logo.png') right top no-repeat;*//*
+    background-image:none!important;
+    height: 12px;
+    line-height: 12px;
+    color: #504c4c;
     font-family: Arial, helvetica, sans-serif;
     font-size: 20px;
     text-align: right;
     padding-right: 78px;
-}
+}*/
 
 .oferte .product_image {
     display: block;
@@ -325,7 +328,7 @@ div.oferte h1 a {
     font-weight: bold;
     position: relative;
     z-index: 100;
-    top:-40px;
+    top:-46px;
     left: 16px;
     width:50px;
     /*border: 1px solid red;*/

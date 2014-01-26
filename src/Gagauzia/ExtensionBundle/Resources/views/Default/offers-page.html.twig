@@ -10,4 +10,28 @@ filter="cssrewrite" %}
             <p class="message-text">Bun&#259;, <br>Vreau sa te ajut!</p>
         </div>
     </div>
+    {#<div class="product-details">
+        <h1>Imi poti sugera titlul produsului si pretul? &#123;&#35;<a href="http://www.google.com" class="find">sugereaza-mi</a>&#35;&#125;</h1>
+
+    </div>#}
+    <div class="spacer5"></div>
+    <div class="spacer5"></div>
+    <div class="product-details oferte">
+        {% for item in products %}
+
+            <a class="product_image" href="{{ item.url }}" target="_blank"><img src="{{ item.image }}" alt="{{ item.title }}" width="70" height="70" /></a>
+            <div class="info">
+                <h2><a href="{{ item.url }}" target="_blank">{{ item.title[:50] }}</a></h2>
+                <p class="price">{{ item.price }}<sup>{{ item.wow }}</sup> Lei</p>
+            </div>
+            {#<a href="{{ item.url }}" target="_blank"><div class="wow"><div class="detail_wow">{{ item.wow }}%</div></div></a>#}
+
+            <div class="spacer0"></div>
+        {% endfor %}
+    </div>
+    {#<div class="product-details product-services buttons">
+        <h2>Te-ai hotarat sa cumeri de la eMAG?</h2>
+        <a class="view" href="http://www.google.com" title="vreau s&#259; v&#259;d" target="_blank">vreau s&#259; v&#259;d</a>
+        <a class="buy" href="http://www.google.com" title="adaug&#259; &icirc;n co&#351;" target="_blank">adaug&#259; &icirc;n co&#351;</a>
+    </div>#}
 </div>
