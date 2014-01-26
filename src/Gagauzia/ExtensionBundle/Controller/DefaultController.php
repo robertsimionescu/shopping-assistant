@@ -148,6 +148,7 @@ class DefaultController extends Controller
             $priceDifference = $price - $emagProduct->getPrice();
 
             $productInfo = array(
+                'id'                => $emagProduct->getId(),
                 'title'             => $emagProduct->getTitle(),
                 'price'             => floor($emagProduct->getPrice()),
                 'price_decimal'     => round(($emagProduct->getPrice() - floor($emagProduct->getPrice())) * 100),
