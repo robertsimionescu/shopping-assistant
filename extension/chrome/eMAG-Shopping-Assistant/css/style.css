@@ -1,0 +1,15 @@
+body {
+    margin: 0;
+    padding: 0;
+    width: 437px;
+    height: 590px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.fara_gagica{
+    background-image: none!important;
+}
